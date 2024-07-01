@@ -11,12 +11,12 @@ mongoose
   .then(() => console.log("connected to database 🚀"))
   .catch((err) => console.log("❌", err));
 // middlewares
-let corsOptions = {
-  origin: "http://localhost:3000/",
-  optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
-};
-app.use(cors(corsOptions));
+// let corsOptions = {
+//   origin: "http://localhost:3000/",
+//   optionsSuccessStatus: 200,
+// };
 app.use(express.json());
+app.use(cors());
 // routes
 app.use("/api/customer", require("./routes/customer"));
 app.use("/api/admin", require("./routes/admin"));
