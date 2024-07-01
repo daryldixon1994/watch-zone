@@ -26,6 +26,7 @@ module.exports = async (req, res) => {
       status: true,
       data: {
         token,
+        id: admin._id,
         isAdmin: admin.isMainAdmin,
         isSubAdmin: admin.isSubAdmin,
         isLoggedIn: true,
