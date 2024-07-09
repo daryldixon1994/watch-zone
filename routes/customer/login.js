@@ -20,7 +20,7 @@ module.exports = async (req, res) => {
         message: "Wrong email or passwrod, please try again",
       });
     }
-    const token = jwt.sign({ id: customer._id }, PKEY, { expiresIn: "1h" });
+    const token = jwt.sign({ id: customer._id }, PKEY, { expiresIn: "7 days" });
 
     res.status(200).json({
       status: true,
