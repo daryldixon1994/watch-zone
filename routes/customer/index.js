@@ -23,6 +23,16 @@ route.put("/updateDetails", verify, require("./updateDetails"));
 // addProductToCart : /api/customer/addProductToCart
 route.post("/addProductToCart/:pId", verify, require("./addProductToCart"));
 
+// deleteProductFromCart : /api/customer/addProductToCart
+route.delete(
+  "/deleteProductFromCart/:id",
+  verify,
+  require("./deleteProductFromCart")
+);
+
+// addProductToCart : /api/customer/addProductToCart
+route.post("/addProductToCart/:pId", verify, require("./addProductToCart"));
+
 // incProductOfCart : /api/customer/incProductOfCart
 route.put("/incProductOfCart/:id", verify, require("./incProductOfCart"));
 
